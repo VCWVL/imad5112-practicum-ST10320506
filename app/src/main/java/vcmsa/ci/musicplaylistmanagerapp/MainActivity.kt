@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-    }
-}
+        }// end of ViewCompat
+
+        //Student Number: ST10320506 and Full Name: Tamara Jada Kaligan
+
+    }// end of onCreate
+}// end of MainActivity
