@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
             artistName.add(artist)
             songRating.add(rating)
             userComments.add(comments)
-
             //Toast message is displayed to show the user that song details were added successfully
             Toast.makeText(this, "Song Details added successfully!", Toast.LENGTH_SHORT).show()
         }
