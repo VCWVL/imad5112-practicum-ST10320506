@@ -45,7 +45,7 @@ a simple Detailed View Screen to display the song details list and the song deta
 ## Getting started
 
 1. **Clone the repository:** ```bash
-   git clone []
+   git clone [https://github.com/VCWVL/imad5112-practicum-ST10320506.git]
 2. **Android Studio**
    used to code the Kotlin application 
 4. **Blustacks Emulator**
