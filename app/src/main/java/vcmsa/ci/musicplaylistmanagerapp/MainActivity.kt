@@ -2,6 +2,7 @@ package vcmsa.ci.musicplaylistmanagerapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+
     }// end of onCreate
 
     //Method/function for the Add Song button (user's enter song details in here)
@@ -82,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
             //IF statement to check if any of the input boxes are empty
             //If song is empty OR artist is empty OR comments are empty then a toast message is displayed
-            if (song.isEmpty() || artist.isEmpty() || comments.isEmpty() ) {
+            if (song.isEmpty() || artist.isEmpty() || comments.isEmpty() || rating > 5 || rating < 1 ) {
                 //Toast message is displayed to prompt the user to enter details in all the fields
                 Toast.makeText(this, "Please enter details in all fields.", Toast.LENGTH_SHORT).show()
                 return@setPositiveButton
@@ -94,7 +96,13 @@ class MainActivity : AppCompatActivity() {
             userComments.add(comments)
             //Toast message is displayed to show the user that song details were added successfully
             Toast.makeText(this, "Song Details added successfully!", Toast.LENGTH_SHORT).show()
+
+            //Log message to display the song details in LogCat
+            Log.d("Main Activity", "Song Title: $song")
+            Log.d("Main Activity", "Artist's Name: $artist")
+            Log.d("Main Activity", "Comments: $comments")
         }
+
         //Adding a negative button function to the dialog box so when clicked it closes the dialog box and nothing is added to list
         builder.setNegativeButton("Cancel", null)
         builder.show()

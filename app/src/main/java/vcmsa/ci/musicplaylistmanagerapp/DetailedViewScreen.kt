@@ -20,6 +20,8 @@ class DetailedViewScreen : AppCompatActivity() {
             insets
         }// end of ViewCompat
 
+        //Tamara Jada Kaligan - ST10320506
+
         //Declaring GUI variables for the Detailed View Screen
         val tvDisplayAll = findViewById<TextView>(R.id.tvDisplayAll)
         val btnList = findViewById<Button>(R.id.btnList)
@@ -37,7 +39,7 @@ class DetailedViewScreen : AppCompatActivity() {
             val output = StringBuilder()
             //Table headers with fixed-width columns
             output.append(String.format("%-5s%-5s%-5s%-5s%-20s\n", "Song Title", "Artist Name", "Rating (1-5)", "Comments"))
-            output.append("----\n")
+            output.append("-------------\n")
 
             //for loop created to display all the song list details added by the user
             for (i in songTitle.indices) {
@@ -53,11 +55,8 @@ class DetailedViewScreen : AppCompatActivity() {
                 )
 
             }
+            //Displays all the song details in text view
             tvDisplayAll.text = output.toString()
-        }
-
-        fun calculateAverage() {
-            
         }
 
         //Display All button function called using on click listener
